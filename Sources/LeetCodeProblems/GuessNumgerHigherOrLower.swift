@@ -11,13 +11,7 @@ public class GuessGame {
     }
     
     func guess(_ n: Int) -> Int {
-        if n == q {
-            return 0
-        } else if n > q {
-            return -1
-        } else {
-            return 1
-        }
+        n == q ? 0 : n > q ? -1 : 1
     }
 }
 

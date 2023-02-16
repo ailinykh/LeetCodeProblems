@@ -2,10 +2,6 @@ import XCTest
 import LeetCodeProblems
 
 final class GuessNumberHigherOrLowerTest: XCTestCase {
-    static var allTests = [
-        ("Test case", testCase)
-    ]
-    
     func testCase() {
         [
             (n: 6, pick: 10, output:6),
