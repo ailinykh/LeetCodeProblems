@@ -1,11 +1,12 @@
 // 374. Guess Number Higher or Lower
 // https://leetcode.com/problems/guess-number-higher-or-lower
+
 import Foundation
 
-class GuessGame {
+public class GuessGame {
     private let q: Int
     
-    init(_ q: Int) {
+    public init(_ q: Int) {
         self.q = q
     }
     
@@ -20,8 +21,8 @@ class GuessGame {
     }
 }
 
-class Solution: GuessGame {
-    func guessNumber(_ n: Int) -> Int {
+public class GuessNumberHigherOrLower: GuessGame {
+    public func guessNumber(_ n: Int) -> Int {
         // 1 < pick < n
         if n == 1 || guess(n) == 0 {
             return n
