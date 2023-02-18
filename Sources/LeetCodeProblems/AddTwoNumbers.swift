@@ -49,7 +49,8 @@ public class AddTwoNumbers {
 extension ListNode {
     public var array: [Int] {
         var arr = [Int]()
-        var node = ListNode(0, self)
+        var node = ListNode()
+        node.next = self
         while let next = node.next {
             arr.append(next.val)
             node = next
