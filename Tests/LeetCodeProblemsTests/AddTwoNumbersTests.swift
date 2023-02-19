@@ -11,10 +11,12 @@ final class AddTwoNumbersTest: XCTestCase {
     }
 }
 
-extension AddTwoNumbers.ListNode {
-    public var array: [Int] {
+private typealias ListNode =  AddTwoNumbers.ListNode
+
+private extension ListNode {
+    var array: [Int] {
         var arr = [Int]()
-        var node = AddTwoNumbers.ListNode(0, self)
+        var node = ListNode(0, self)
         while let next = node.next {
             arr.append(next.val)
             node = next
@@ -23,16 +25,16 @@ extension AddTwoNumbers.ListNode {
     }
 }
 
-extension Array where Element == Int {
-    public var list: AddTwoNumbers.ListNode? {
-        var first, last: AddTwoNumbers.ListNode?
+private extension Array where Element == Int {
+    var list: ListNode? {
+        var first, last: ListNode?
         for n in self {
             if last != nil {
-                let node = AddTwoNumbers.ListNode(n)
+                let node = ListNode(n)
                 last?.next = node
                 last = node
             } else {
-                first = AddTwoNumbers.ListNode(n)
+                first = ListNode(n)
                 last = first
             }
         }
