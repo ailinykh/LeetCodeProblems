@@ -18,19 +18,20 @@ final class InvertBinaryTreeTest: XCTestCase {
         XCTAssertEqual(tree.array, [10,6,15,4,8,12,18,2,5,7,9,11,13,16,20,1,3])
         
         let array = [75,50,100,20,60,90,150,1,49,55,70,80,99,140,200]
-        XCTAssertEqual(array.tree?.array, array)
+        XCTAssertEqual(array.tree.array, array)
     }
     
     func testCase() {
         let s = InvertBinaryTree()
         XCTAssertEqual(s.invertTree([4,2,7,1,3,6,9].tree)?.array, [4,7,2,9,6,3,1])
         XCTAssertEqual(s.invertTree([2,1,3].tree)?.array, [2,3,1])
+        XCTAssertEqual(s.invertTree([].tree)?.array, [])
     }
 }
 
 private extension TreeNode {
     var array: [Int] {
-        var arr = [val]
+        var arr = val == 0 ? [] : [val]
         var level = 1
         var leaves = [Int]()
         repeat {
@@ -77,8 +78,8 @@ private extension TreeNode {
 }
 
 private extension Array where Element == Int {
-    var tree: TreeNode? {
-        guard let first = first else { return nil }
+    var tree: TreeNode {
+        guard let first = first else { return TreeNode() }
         let tree = TreeNode(first)
         for i in 1..<count {
             tree.add(node: TreeNode(self[i]))
