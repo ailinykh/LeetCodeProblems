@@ -1,6 +1,6 @@
 // 2. Add Two Numbers
 // https://leetcode.com/problems/add-two-numbers
-// medium
+// Medium
 
 import Foundation
 
