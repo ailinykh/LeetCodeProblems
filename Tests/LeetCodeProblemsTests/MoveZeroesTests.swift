@@ -12,5 +12,9 @@ final class MoveZeroesTest: XCTestCase {
         var arr2 = [0]
         s.moveZeroes(&arr2)
         XCTAssertEqual(arr2, [0])
+        
+        var arr3 = [Int]()
+        s.moveZeroes(&arr3)
+        XCTAssertEqual(arr3, [])
     }
 }
