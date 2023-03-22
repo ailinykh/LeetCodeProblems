@@ -4,10 +4,8 @@
 
 import Foundation
 
-public class AddTwoNumbers {
-    public init() {}
-
-    public func addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
+class AddTwoNumbers {
+    func addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
         let result = ListNode()
         var node = result
         var firstNode: ListNode? = ListNode(0, l1)

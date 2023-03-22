@@ -1,5 +1,5 @@
 import XCTest
-import LeetCodeProblems
+@testable import LeetCodeProblems
 
 final class AddTwoNumbersTest: XCTestCase {
     func testCase() {
